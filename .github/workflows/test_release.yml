@@ -82,20 +82,6 @@ jobs:
       use_kpm: ${{ inputs.use_kpm }}
       use_bbg: ${{ inputs.use_bbg }}
 
-  get-ksu-manager:
-    if: ${{ inputs.get_manager }}
-    uses: ./.github/workflows/get-manager.yml
-    secrets: inherit
-    with:
-      make_release: ${{ inputs.make_release }}
-      kernelsu_variant: ${{ inputs.kernelsu_variant }}
-      kernelsu_branch: ${{ inputs.kernelsu_branch }}
-      # kernelsu_branch_other: ${{ inputs.kernelsu_branch_other }}
-      version: ${{ inputs.version }}
-      use_zram: ${{ inputs.use_zram }}
-      use_kpm: ${{ inputs.use_kpm }}
-      use_bbg: ${{ inputs.use_bbg }}
-
   trigger-release:
     runs-on: ubuntu-latest
     permissions:
