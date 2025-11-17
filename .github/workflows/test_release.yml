@@ -67,31 +67,7 @@ jobs:
     with:
       kernelsu_variant: ${{ inputs.kernelsu_variant }}
 
-  build-kernel-a12-5-10:
-    uses: ./.github/workflows/kernel-a12-5.10.yml
-    secrets: inherit
-    with:
-      make_release: true
-      kernelsu_variant: ${{ inputs.kernelsu_variant }}
-      kernelsu_branch: ${{ inputs.kernelsu_branch }}
-      # # kernelsu_branch_other: ${{ inputs.kernelsu_branch_other }}
-      version: ${{ inputs.version }}
-      build_time: ${{ inputs.build_time }}
-      use_zram: ${{ inputs.use_zram }}
-      use_kpm: ${{ inputs.use_kpm }}
-      use_bbg: ${{ inputs.use_bbg }}
 
-  # build-kernel-a13-5-10:
-  #   uses: ./.github/workflows/kernel-a13-5.10.yml
-  #   secrets: inherit
-  #   with:
-  #     make_release: ${{ inputs.make_release }}
-  #     kernelsu_variant: ${{ inputs.kernelsu_variant }}
-  #     kernelsu_branch: ${{ inputs.kernelsu_branch }}
-  #     # kernelsu_branch_other: ${{ inputs.kernelsu_branch_other }}
-  #     version: ${{ inputs.version }}
-  #     use_zram: ${{ inputs.use_zram }}
-  #     use_kpm: ${{ inputs.use_kpm }}
 
   build-kernel-a13-5-15:
     uses: ./.github/workflows/kernel-a13-5.15.yml
@@ -106,31 +82,6 @@ jobs:
       use_kpm: ${{ inputs.use_kpm }}
       use_bbg: ${{ inputs.use_bbg }}
 
-  # build-kernel-a14-5-15:
-  #   uses: ./.github/workflows/kernel-a14-5.15.yml
-  #   secrets: inherit
-  #   with:
-  #     make_release: ${{ inputs.make_release }}
-  #     kernelsu_variant: ${{ inputs.kernelsu_variant }}
-  #     kernelsu_branch: ${{ inputs.kernelsu_branch }}
-  #     # kernelsu_branch_other: ${{ inputs.kernelsu_branch_other }}
-  #     version: ${{ inputs.version }}
-  #     use_zram: ${{ inputs.use_zram }}
-  #     use_kpm: ${{ inputs.use_kpm }}
-
-  build-kernel-a14-6-1:
-    uses: ./.github/workflows/kernel-a14-6.1.yml
-    secrets: inherit
-    with:
-      make_release: ${{ inputs.make_release }}
-      kernelsu_variant: ${{ inputs.kernelsu_variant }}
-      kernelsu_branch: ${{ inputs.kernelsu_branch }}
-      # kernelsu_branch_other: ${{ inputs.kernelsu_branch_other }}
-      version: ${{ inputs.version }}
-      use_zram: ${{ inputs.use_zram }}
-      use_kpm: ${{ inputs.use_kpm }}
-      onlyAk3: ${{ inputs.onlyAk3 }}
-      build_time: ${{ inputs.build_time }}
   get-ksu-manager:
     if: ${{ inputs.get_manager }}
     uses: ./.github/workflows/get-manager.yml
