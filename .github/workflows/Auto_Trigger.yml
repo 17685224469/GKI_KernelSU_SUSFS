@@ -97,10 +97,11 @@ jobs:
                 "make_release": "true",
                 "kernelsu_variant": "SukiSU",
                 "kernelsu_branch": "Stable(标准)",
-                "version": "",
-                "use_zram": "false",
+                "version": "-android13-8-00021-g6f2f96be86b9-ab13729987",
+                "build_time": "Wed Jul 2 02:41:59 UTC 2025",
+                "use_zram": "true",
                 "use_bbg": "true",
-                "use_kpm": "true",
+                "use_kpm": "false",
                 "get_manager": "true"
               }
             }'
