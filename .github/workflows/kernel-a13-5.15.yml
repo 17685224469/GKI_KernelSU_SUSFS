@@ -21,7 +21,7 @@ on:
       version:
         required: false
         type: string
-        default: ""
+        default: "-android13-8-00021-g6f2f96be86b9-ab13729987"
       use_zram:
         description: '是否开启增加更多ZRAM算法?'
         required: true
@@ -46,6 +46,7 @@ on:
         description: '设置内核构建时间(格式见仓库说明)'
         required: false
         type: string
+        default: "Wed Jul 2 02:41:59 UTC 2025"
   
 jobs:
   build-kernel-a13-5-15-kernelsu-susfs:
